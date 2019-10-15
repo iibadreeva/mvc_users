@@ -1,0 +1,34 @@
+-
+    const newDate = JSON.stringify((new Date).valueOf())
+    const foolder = '__assetsPathStub/'
+
+block variables
+
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        title #{title}
+        meta(content="" name="author")
+        meta(content="" name="description")
+        meta(content="" name="keywords")
+        meta(content="width=device-width, minimal-ui, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport")
+        meta(name="apple-mobile-web-app-title" content="onlyWebPro")
+        meta(name="apple-mobile-web-app-capable" content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style" content="black")
+        link(rel='stylesheet', href=`https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css` integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+        link(rel='stylesheet', href=`${foolder}assets/css/foundation.css?v=${newDate}`)
+        link(rel='stylesheet', href=`${foolder}assets/css/app.css?v=${newDate}`)
+        script(src=`https://code.jquery.com/jquery-3.3.1.slim.min.js` ntegrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
+        script(src=`${foolder}assets/js/foundation.js?v=${newDate}`)
+    body
+        div(class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom")
+            h5(class="my-0 mr-md-auto font-weight-normal") JSExpert
+            nav(class="my-2 my-md-0 mr-md-3")
+                a(href="#" class="p-2 text-dark") Главная
+                a(href="#gallery" class="p-2 text-dark") Галлерея
+                a(href="#info" class="p-2 text-dark") О пользователе
+            a(href="#" class="btn btn-outline-primary") Войти
+        .main
+            .container
+                block content

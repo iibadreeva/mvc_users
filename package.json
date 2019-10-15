@@ -1,0 +1,63 @@
+{
+  "name": "sales_chain",
+  "version": "1.0.0",
+  "author": "badreeva inna",
+  "license": "ISC",
+  "scripts": {
+    "dev": "set NODE_ENVDEVELOPMENT&gulp",
+    "prod": "set NODE_ENV=production&gulp release"
+  },
+  "browserslist": [
+    "Chrome >= 23"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-transform-runtime": "7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-eslint": "10.0.3",
+    "browser-sync": "^2.18.7",
+    "del": "^5.1.0",
+    "dom4": "2.1.5",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-better-rollup": "^4.0.1",
+    "gulp-cheerio": "~0.6.2",
+    "gulp-concat": "~2.6.1",
+    "gulp-concat-css": "~2.3.0",
+    "gulp-css-unit": "^1.2.2",
+    "gulp-csso": "~2.0.0",
+    "gulp-eslint": "~3.0.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-insert": "^0.5.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-polyfiller": "0.0.1",
+    "gulp-pug": "^3.2.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-sourcemaps": "~2.4.0",
+    "gulp-tinypng": "^1.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp.spritesmith": "^6.11.0",
+    "request": "^2.65.0",
+    "rollup": "^1.23.0",
+    "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-terser": "5.1.2",
+    "screenfull": "^5.0.0",
+    "whatwg-fetch": "3.0.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "@babel/runtime-corejs3": "7.6.2",
+    "animate.css": "^3.7.2",
+    "core-js": "^3.2.1",
+    "handlebars": "^4.4.2",
+    "jquery": "^3.4.1",
+    "normalize.css": "~5.0.0"
+  }
+}

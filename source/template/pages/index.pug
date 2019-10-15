@@ -1,0 +1,68 @@
+extends ../_template
+
+block variables
+    - var title = 'Страница пользователей'
+
+block content
+    div(id="login-view" class="hide row")
+        div(class="col-md-12 py-5")
+            div(class="text-center")
+                div(class="alert alert-secondary") This is Login Route
+                form(class="form-signit")
+                    h1(class="h3 mb-3 font-weight-normal") Пожалуйста войтите в систему
+                    .form-group
+                        label(for="inputEmail" class="sr-only1") Email
+                        input(type="text" id="inputEmail" class="form-control")
+                    .mb-3.form-group
+                        label(for="inputPassowrd" class="sr-only1") Пароль
+                        input(type="text" id="inputPassowrd" class="form-control")
+                    .mb-3
+                    button(class="btn btn-lg btn-primary") sends
+                    p(class="mt-5 mb-3 text-muted") &copy; 2019
+    div(id="main-view" class="hide")
+        .row
+            .col-md-12
+                section(class="jumbotron text-center")
+                    .container
+                        h1(class="jumbotron-fluid") Список пользователей
+                        p(class="lead text-muted") На странице все пользователи систмы
+        .row
+            .col-md-3
+                div(class="btn-group" id="dropdown-email")
+                    button(type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Сортировать
+                    div(class="dropdown-menu" aria-labelledby="dropdownMenuButton")
+                        a(class="dropdown-item" sorting-type="A" href="#") Прямой порядок: A-Z
+                        a(class="dropdown-item" sorting-type="Z" href="#") Обратный порядок: Z-A
+            .col-md-3
+                div(class="btn-group" id="dropdown-role")
+                    button(type="button" class="btn btn-primary dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Фильтровать по роли
+                    div(class="dropdown-menu" aria-labelledby="dropdownMenuButton")
+                        a(class="dropdown-item" sorting-type="Admin" href="#") Выбрать роль Админ
+                        a(class="dropdown-item" sorting-type="User" href="#") Выбрать роль Юзер
+            .col-md-6
+                .input-group.mb-3
+                    input(id="inputSearch" type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1")
+            table(class="table table-hover")
+                thead
+                    th(scope="col")
+                        input(type="checkbox" id="select-all")
+                    th(scope="col") #
+                    th(scope="col") Имя
+                    th(scope="col") #Логин
+                    th(scope="col") роль
+                    th(scope="col") Email
+                    th(scope="col") Адес
+                    th(scope="col") Сайт
+                    th(scope="col") Детальнее
+                tbody(id="user-list")
+            .col-md-12.py-5
+                .text-center
+                    a(href="#" id="next-page" class="btn btn-primary my-2") Следуюая страница
+                div(class="text-center" id="stats")
+    div(id="info-view" class="row hide")
+        div(class="col-md-12 order-md-1")
+            h4(class="mb-3") Информация о пользователе
+            #details-items
+            hr.mb-4
+            button(id="back-btn" class="btn btn-primary btn-lg btn-block") Ok, вернуться назад
+            .py-5

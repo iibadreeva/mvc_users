@@ -1,0 +1,35 @@
+{
+  "Success": true,
+  "Data": [
+    {
+      "Id": 492275,
+      "Number": 1,
+      "Letter": "Д",
+      "AwaitTimeSeconds": 1837,
+      "AwaitTactic": 2,
+      "CategoryId": 151,
+      "CategoryName": "Пополнение / снятие средств с карты",
+      "CanBeRemotelyProcessed": true
+    },
+    {
+      "Id": 492281,
+      "Number": 5,
+      "Letter": "В",
+      "AwaitTimeSeconds": 3218,
+      "AwaitTactic": 3,
+      "CategoryId": 141,
+      "CategoryName": "Внесение ежемесячного платежа",
+      "CanBeRemotelyProcessed": true
+    },
+    {
+      "Id": 492282,
+      "Number": 6,
+      "Letter": "В",
+      "AwaitTimeSeconds": 2051,
+      "AwaitTactic": 3,
+      "CategoryId": 141,
+      "CategoryName": "Внесение ежемесячного платежа",
+      "CanBeRemotelyProcessed": true
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+    "Success": true,
+    "Data": [
+        {
+            "Id": 462274,
+            "Number": 2,
+            "Letter": "В",
+            "AwaitTimeSeconds": 1782,
+            "AwaitTactic": 1,
+            "CategoryId": 141,
+            "CategoryName": "1Внесение ежемесячного платежа",
+            "CanBeRemotelyProcessed": false
+        },
+        {
+            "Id": 492275,
+            "Number": 1,
+            "Letter": "Д",
+            "AwaitTimeSeconds": 1837,
+            "AwaitTactic": 2,
+            "CategoryId": 151,
+            "CategoryName": "2Пополнение / снятие средств с карты",
+            "CanBeRemotelyProcessed": true
+        },
+        {
+            "Id": 492281,
+            "Number": 5,
+            "Letter": "В",
+            "AwaitTimeSeconds": 3218,
+            "AwaitTactic": 3,
+            "CategoryId": 141,
+            "CategoryName": "3Внесение ежемесячного платежа",
+            "CanBeRemotelyProcessed": true
+        },
+        {
+            "Id": 492282,
+            "Number": 6,
+            "Letter": "В",
+            "AwaitTimeSeconds": 2051,
+            "AwaitTactic": 3,
+            "CategoryId": 141,
+            "CategoryName": "4Внесение ежемесячного платежа",
+            "CanBeRemotelyProcessed": true
+        },
+        {
+            "Id": 4922751,
+            "Number": 7,
+            "Letter": "Д",
+            "AwaitTimeSeconds": 1837,
+            "AwaitTactic": 2,
+            "CategoryId": 11,
+            "CategoryName": "5Пополнение / снятие средств с карты",
+            "CanBeRemotelyProcessed": true
+        },
+        {
+            "Id": 4922812,
+            "Number": 8,
+            "Letter": "В",
+            "AwaitTimeSeconds": 3218,
+            "AwaitTactic": 3,
+            "CategoryId": 11,
+            "CategoryName": "7Внесение ежемесячного платежа",
+            "CanBeRemotelyProcessed": true
+        },
+        {
+            "Id": 4922823,
+            "Number": 9,
+            "Letter": "В",
+            "AwaitTimeSeconds": 2051,
+            "AwaitTactic": 3,
+            "CategoryId": 11,
+            "CategoryName": "8Внесение ежемесячного платежа",
+            "CanBeRemotelyProcessed": true
+        },
+        {
+            "Id": 123213,
+            "Number": 10,
+            "Letter": "Д",
+            "AwaitTimeSeconds": 1837,
+            "AwaitTactic": 2,
+            "CategoryId": 11,
+            "CategoryName": "9Пополнение / снятие средств с карты",
+            "CanBeRemotelyProcessed": true
+        },
+        {
+            "Id": 4812,
+            "Number": 11,
+            "Letter": "В",
+            "AwaitTimeSeconds": 3218,
+            "AwaitTactic": 3,
+            "CategoryId": 11,
+            "CategoryName": "10Внесение ежемесячного платежа",
+            "CanBeRemotelyProcessed": true
+        },
+        {
+            "Id": 493,
+            "Number": 19,
+            "Letter": "В",
+            "AwaitTimeSeconds": 2051,
+            "AwaitTactic": 3,
+            "CategoryId": 11,
+            "CategoryName": "11Внесение ежемесячного платежа",
+            "CanBeRemotelyProcessed": true
+        },
+        {
+            "Id": 49222823,
+            "Number": 9,
+            "Letter": "В",
+            "AwaitTimeSeconds": 2051,
+            "AwaitTactic": 3,
+            "CategoryId": 11,
+            "CategoryName": "12Внесение ежемесячного платежа",
+            "CanBeRemotelyProcessed": true
+        },
+        {
+            "Id": 1223213,
+            "Number": 10,
+            "Letter": "Д",
+            "AwaitTimeSeconds": 1837,
+            "AwaitTactic": 2,
+            "CategoryId": 11,
+            "CategoryName": "13Пополнение / снятие средств с карты",
+            "CanBeRemotelyProcessed": true
+        },
+        {
+            "Id": 24812,
+            "Number": 11,
+            "Letter": "В",
+            "AwaitTimeSeconds": 3218,
+            "AwaitTactic": 3,
+            "CategoryId": 11,
+            "CategoryName": "14Внесение ежемесячного платежа",
+            "CanBeRemotelyProcessed": true
+        },
+        {
+            "Id": 4923,
+            "Number": 19,
+            "Letter": "В",
+            "AwaitTimeSeconds": 2051,
+            "AwaitTactic": 3,
+            "CategoryId": 11,
+            "CategoryName": "15Внесение ежемесячного платежа",
+            "CanBeRemotelyProcessed": true
+        }
+    ]
+}
