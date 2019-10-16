@@ -19,7 +19,7 @@
                 "geo": {
                     "lat": "-37.3159",
                     "lng": "81.1496"
-                },
+                }
             },
             "role": "Admin",
             "phone": "1770-736-0031",
@@ -43,7 +43,7 @@
                 "geo": {
                     "lat": "-37.3159",
                     "lng": "81.1496"
-                },
+                }
             },
             "role": "User",
             "phone": "1770-736-0031",
@@ -67,7 +67,7 @@
                 "geo": {
                     "lat": "-37.3159",
                     "lng": "81.1496"
-                },
+                }
             },
             "role": "User",
             "phone": "1770-736-0031",
@@ -91,7 +91,7 @@
                 "geo": {
                     "lat": "-37.3159",
                     "lng": "81.1496"
-                },
+                }
             },
             "role": "Admin",
             "phone": "1770-736-0031",
@@ -115,7 +115,7 @@
                 "geo": {
                     "lat": "-37.3159",
                     "lng": "81.1496"
-                },
+                }
             },
             "role": "User",
             "phone": "1770-736-0031",
@@ -148,7 +148,7 @@
                 "name": "Romaguera-Crona",
                 "catcPhrase": "Multi-layered chint-server neural-net",
                 "bs": "harness real-time e-markets"
-            },
+            }
         },
         {
             "id": 7,
@@ -172,7 +172,7 @@
                 "name": "Romaguera-Crona",
                 "catcPhrase": "Multi-layered chint-server neural-net",
                 "bs": "harness real-time e-markets"
-            },
+            }
         },
         {
             "id": 8,
@@ -196,7 +196,7 @@
                 "name": "Romaguera-Crona",
                 "catcPhrase": "Multi-layered chint-server neural-net",
                 "bs": "harness real-time e-markets"
-            },
+            }
         },
         {
             "id": 9,
@@ -220,7 +220,7 @@
                 "name": "Romaguera-Crona",
                 "catcPhrase": "Multi-layered chint-server neural-net",
                 "bs": "harness real-time e-markets"
-            },
+            }
         },
         {
             "id": 10,
@@ -244,7 +244,7 @@
                 "name": "Romaguera-Crona",
                 "catcPhrase": "Multi-layered chint-server neural-net",
                 "bs": "harness real-time e-markets"
-            },
+            }
         },
         {
             "id": 11,
@@ -268,7 +268,7 @@
                 "name": "Romaguera-Crona",
                 "catcPhrase": "Multi-layered chint-server neural-net",
                 "bs": "harness real-time e-markets"
-            },
-        },
+            }
+        }
     ]
 }
