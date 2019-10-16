@@ -15,25 +15,24 @@ export default class GalleryController {
 
     initListeners() {
         this.view.DOMElements.userList.addEventListener('click', this.tableLineHandler.bind(this));
-        this.view.DOMElements.nextBtn.addEventListener('click', this.getNextPageHandler.bind(this));
 
         this.view.DOMElements.search.addEventListener('keyup', this.searchHandler.bind(this));
         this.view.DOMElements.emailDropdown.addEventListener('click', this.sortingHandler.bind(this, this.view.DOMElements.emailDropdown));
         this.view.DOMElements.roleDropdown.addEventListener('click', this.sortingHandler.bind(this, this.view.DOMElements.roleDropdown));
+
+        this.view.DOMElements.nextBtn.addEventListener('click', this.getNextPageHandler.bind(this));
     }
 
     tableLineHandler(event) {
+        event.preventDefault();
         let isButton = event.target.getAttribute('data-row-id');
-        isButton ? this.utils.navigateTo("details") : this.view.selectTableLine(event)
+        isButton ? this.openDetail(isButton) : this.view.selectTableLine(event)
     }
 
-    getNextPageHandler(event) {
-        event && event.preventDefault();
-        this.view.buildUsersList(this.getNextPage());
-        if(this.isMaxPage()){
-            this.view.blockNextPage();
-            this.countStats();
-        }
+    openDetail(buttonId) {
+        let user = this.model.getUserById(buttonId).then(data => {
+            this.view.showSingleUser(data);
+        })
     }
 
     searchHandler(event) {
@@ -52,6 +51,12 @@ export default class GalleryController {
         res && this.applySortingMethod(this.view.getSortingType(event));
     }
 
+    getNextPageHandler(event) {
+        event && event.preventDefault();
+        this.view.buildUsersList(this.getNextPage());
+        this.isLastPage();
+    }
+
     applySortingMethod(sortingType) {
         if(!sortingType) {return}
         this.pageConfig.currentPage = 0;
@@ -59,12 +64,18 @@ export default class GalleryController {
         this.view.buildUsersList(utils.sortingConfig(sortingType, this.getNextPage()))
     }
 
-
     getNextPage() {
         let start = this.pageConfig.itemsPerPage * this.pageConfig.currentPage;
         let end = this.pageConfig.itemsPerPage + start;
         this.pageConfig.currentPage++;
         return this.model.usersListData.slice(start, end);
+    }
+
+    isLastPage() {
+        if(this.isMaxPage()){
+            this.view.blockNextPage();
+            this.countStats();
+        }
     }
 
     isMaxPage() {
@@ -80,8 +91,11 @@ export default class GalleryController {
     }
 
     init() {
-        this.initListeners();
-        this.model.prepareUsersListData();
-        this.view.buildUsersList(this.getNextPage());
+        this.model.getUserList().then(data => {
+            this.initListeners();
+            this.view.buildUsersList(this.getNextPage());
+            this.isLastPage();
+        });
+
     }
 }

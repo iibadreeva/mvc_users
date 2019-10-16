@@ -9,15 +9,20 @@ export default class GalleryView {
             roleDropdown : document.querySelector('#dropdown-role'),
             search : document.querySelector('#inputSearch'),
             nextBtn : document.querySelector('#next-page'),
-            backBtn : document.querySelector('#back-btn'),
+            backBtn : document.querySelector('#back-btn-list'),
 
             detailsView : document.querySelector('#details-view'),
             mainView : document.querySelector('#main-view'),
             detailsItems : document.querySelector('#details-items'),
+
+            usersList : document.querySelectorAll('.users-list'),
+            singleUser : document.querySelector('.single-user'),
+            singleUserDetails : document.querySelector('#single-user-details'),
         };
 
         this.counter = 0;
         this.DOMElements.selectAll.addEventListener("click", this.selectAllItems.bind(this));
+        this.DOMElements.backBtn.addEventListener("click", this.hideSingleUser.bind(this));
     }
 
     tableTemplate(item) {
@@ -39,6 +44,38 @@ export default class GalleryView {
             </div>
         </td>
     </tr>`;
+    }
+
+    singleUserTemmplate(item) {
+        return `<form class="needs-validation" novalidate="">
+            <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="first name">Name</label>
+                <input type="text" class="form-control" value="${item.name}" readonly>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="first name">Role</label>
+                <input type="text" class="form-control" value="${item.role}" readonly>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="last name">Login</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">@</span>
+                    </div>
+                    <input type="text" class="form-control" value="${item.username}" readonly>
+                </div>                
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="email">Email <span class="text-muted">Опционално</span> </label>
+                <input type="text" class="form-control" value="${item.email}" readonly>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="address">Address</label>
+                <input type="text" class="form-control" value="${item.address.zipcode}, ${item.address.city}, ${item.address.street}" readonly>
+            </div>
+            </div>
+        </form>`
     }
 
     selectAllItems(event) {
@@ -93,5 +130,16 @@ export default class GalleryView {
         filterSortFunction && page;
         let result = page.map(item => this.tableTemplate(item));
         this.DOMElements.userList.innerHTML += result.join("");
+    }
+
+    showSingleUser(item) {
+        this.DOMElements.usersList.forEach(item => item.classList.add("hide"));
+        this.DOMElements.singleUser.classList.remove('hide');
+        this.DOMElements.singleUserDetails.innerHTML = this.singleUserTemmplate(item);
+    }
+
+    hideSingleUser() {
+        this.DOMElements.singleUser.classList.add('hide');
+        this.DOMElements.usersList.forEach(item => item.classList.remove("hide"));
     }
 }

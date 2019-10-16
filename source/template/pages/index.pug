@@ -20,13 +20,13 @@ block content
                     button(class="btn btn-lg btn-primary" id="log-in-btn") sends
                     p(class="mt-5 mb-3 text-muted") &copy; 2019
     div(id="main-view" class="hide")
-        .row
+        .row.users-list
             .col-md-12
                 section(class="jumbotron text-center")
                     .container
                         h1(class="jumbotron-fluid") Список пользователей
                         p(class="lead text-muted") На странице все пользователи систмы
-        .row
+        .row.users-list
             .col-md-3
                 div(class="btn-group" id="dropdown-email")
                     button(type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Сортировать
@@ -59,6 +59,9 @@ block content
                 .text-center
                     a(href="#" id="next-page" class="btn btn-primary my-2") Следуюая страница
                 div(class="text-center" id="stats")
+        .row.single-user.hide
+            #single-user-details
+            button(id="back-btn-list" class="btn btn-primary btn-lg btn-block") Ok, вернуться назад
     div(id="info-view" class="row hide")
         div(class="col-md-12 order-md-1")
             h4(class="mb-3") Информация о пользователе
