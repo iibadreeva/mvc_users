@@ -1,5 +1,15 @@
 export default class LoginView {
-    constructor() {}
+    constructor() {
+        this.DOMElements = {
+            logInBtn : document.querySelector('#user-list'),
+            logOutBen : document.querySelector('#select-all'),
+        };
+    }
+
+    getCredentials() {}
+    hideMsg(){}
+    showMsg(){}
+    showLogout(){}
 
     init(items) {}
 
