@@ -22,8 +22,8 @@ let routeConfig = {
             utils.hideView([main, info]);
         },
         init : () => {
-            let model = new LoginModel;
-            let view = new LoginView;
+            let model = new LoginModel();
+            let view = new LoginView();
             new LoginController(model, view);
         }
     },
@@ -56,8 +56,8 @@ let routeConfig = {
         }
     },
 };
-export function updateRoute() {
-    let routeName = document.location.hash.replace(/^#/,'');
+
+function activateRoute(routeName) {
     if(activatedRoutes[routeName]) {
         activatedRoutes[routeName]();
     } else {
@@ -67,5 +67,15 @@ export function updateRoute() {
             route.show();
             activatedRoutes[routeName] = route.show;
         }
+    }
+}
+
+export function updateRoute() {
+    let routeName = document.location.hash.replace(/^#/,'');
+
+    if(routeName && !utils.isLoggedIn() ){
+        utils.navigateTo("");
+    } else {
+        activateRoute(routeName);
     }
 }

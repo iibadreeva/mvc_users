@@ -1,23 +1,38 @@
 export default class LoginView {
     constructor() {
         this.DOMElements = {
-            logInBtn : document.querySelector('#user-list'),
-            logOutBen : document.querySelector('#select-all'),
+            login : document.querySelector('#inputEmail'),
+            password : document.querySelector('#inputPassowrd'),
+            alert : document.querySelector('.alert'),
+
+            logInBtn : document.querySelector('#log-in-btn'),
+            logOutBen : document.querySelector('#log-out-btn'),
         };
     }
 
-    getCredentials() {}
-    hideMsg(){}
-    showMsg(){}
-    showLogout(){}
+    showMsg(msg) {
+        if(msg) {
+            this.DOMElements.alert.classList.remove("hide");
+            this.DOMElements.alert.innerHTML = msg;
+        }
+    }
 
-    init(items) {}
+    hideMsg() {
+        this.DOMElements.alert.classList.add('hide');
+    }
 
-    buildView() {}
+    showLogout() {
+        this.DOMElements.logOutBen.classList.remove('hide');
+    }
 
-    getItemToSave() {}
+    hideLogout() {
+        this.DOMElements.logOutBen.classList.add('hide');
+    }
 
-    setSavedData(data) {}
-
-    setUpdatedData(data) {}
+    getCredentials() {
+        return {
+            login: this.DOMElements.login.value,
+            password: this.DOMElements.password.value
+        }
+    }
 }

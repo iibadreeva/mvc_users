@@ -50,4 +50,9 @@ export default class Utils {
     static navigateTo(routeName) {
         window.location.hash = "#" + routeName;
     }
+
+    static isLoggedIn() {
+        let credentials = JSON.parse(localStorage.getItem('credentials'));
+        return !!credentials;
+    }
 }
